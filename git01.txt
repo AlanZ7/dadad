@@ -1,0 +1,30 @@
+1.Git 仓库初始化与文件提交
+工作区-暂存区-本地仓库
+git init 初始化本地仓库
+***git add 文件添加到暂存区
+git status 查看文件当前状态
+***git commit 提交暂存区到本地仓库
+***git ls-files 查看仓库文件列表
+2.Git 文件修改与版本切换删除
+ 后续修改 提交同步骤1
+ git diff HEAD -- 文件名  文件差异性比较
+ git log 差看提交日志
+***git log --pretty=oneline 简化提交日志
+git reset --hard HEAD^  回退文件上一个版本^^上两个
+git reset --hard HEAD~数字 回退到指定版本
+***git reset --hard  版本hash值  回退向前或者向后 hash值日志里
+git reflog 查看当前用户最近操作日志
+****git checkout --文件名 检出git 本地库文件到工作区
+git  rm 文件名 删除git版本库文件后 git commit -m 
+
+3.本地仓库文件推送到github
+     1.github创建仓库(英文) 
+     2.本地生成ssh 公钥私钥
+                  ssh-kengen -t rsa -C "githubz账号邮箱 "        （342924425.com）
+     3.上传公钥到github
+     4.效验ssh 环境
+     5.执行远程推送
+                  绑定远程仓库地址   git remote add origin git@github.com:AlanZ7/dadad.git 
+                   本地创建   git branch -M main
+                    本地文件推送             git push -u origin main
+      6.刷新远程仓库
