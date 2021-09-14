@@ -35,4 +35,4 @@ git  rm 文件名 删除git版本库文件后 git commit -m “描述”
       4.合并分支 git merge branch_name
       5.重命名分支 git branch -M old_branch_name new_name
       6.删除分支 git branch -d branch_name
-5.本地远程分支
+5.本地远程分支操作
