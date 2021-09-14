@@ -1,9 +1,9 @@
-1.Git 仓库初始化与文件提交
+ 1.Git 仓库初始化与文件提交
 工作区-暂存区-本地仓库
 git init 初始化本地仓库
 ***git add 文件添加到暂存区
 git status 查看文件当前状态
-***git commit 提交暂存区到本地仓库
+***git commit 提交暂存区到本地仓库  commit 前得git add
 ***git ls-files 查看仓库文件列表
 2.Git 文件修改与版本切换删除
  后续修改 提交同步骤1
@@ -15,7 +15,7 @@ git reset --hard HEAD~数字 回退到指定版本
 ***git reset --hard  版本hash值  回退向前或者向后 hash值日志里
 git reflog 查看当前用户最近操作日志
 ****git checkout --文件名 检出git 本地库文件到工作区
-git  rm 文件名 删除git版本库文件后 git commit -m 
+git  rm 文件名 删除git版本库文件后 git commit -m “描述”
 
 3.本地仓库文件推送到github
      1.github创建仓库(英文) 
@@ -28,3 +28,11 @@ git  rm 文件名 删除git版本库文件后 git commit -m
                    本地创建   git branch -M main
                     本地文件推送             git push -u origin main
       6.刷新远程仓库
+4.本地分支的基本操作
+      1.查看本地分支列表 git branch
+      2.创建本地分支 git checkout -b branch_name
+      3.切换分支 git checkout branch_name
+      4.合并分支 git merge branch_name
+      5.重命名分支 git branch -M old_branch_name new_name
+      6.删除分支 git branch -d branch_name
+5.本地远程分支操作
